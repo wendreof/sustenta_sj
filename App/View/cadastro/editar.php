@@ -13,7 +13,7 @@
     <input type="text" name="DEN_COMPLEMENTO" id="DEN_COMPLEMENTO"value="<?php echo $this->getView()->result->__get('DEN_COMPLEMENTO'); ?>"><br>
 
     
-    <input type="hidden" name="id" value="<?php echo $this->getView()->result->__get('DEN_ID'); ?>">
+    <input type="hidden" name="DEN_ID" id="DEN_ID" value="<?php echo $this->getView()->result->__get('DEN_ID'); ?>">
 
     <input type="submit" value="Enviar">
 </form>

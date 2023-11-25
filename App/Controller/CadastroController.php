@@ -41,12 +41,14 @@
 
           $cadastro = new CadastroModel();
           $cadastroDAO = new CadastroDAO();
-          $cadastro->__set("id", $_POST["id"]);
-          $cadastro->__set("nome", $_POST["nome"]);
-          $cadastro->__set("email", $_POST["email"]);
-          $cadastro->__set("telefone", $_POST["telefone"]);
-          $cadastro->__set("assunto", $_POST["assunto"]);
-          $cadastro->__set("mensagem", $_POST["mensagem"]);
+          $cadastro->__set("DEN_ID", $_POST["DEN_ID"]);
+          $cadastro->__set("DEN_TITULO", $_POST["DEN_TITULO"]);
+          $cadastro->__set("DEN_DESCRICAO", $_POST["DEN_DESCRICAO"]);
+          $cadastro->__set("DEN_FOTO_VIDEO", $_POST["DEN_FOTO_VIDEO"]);
+          $cadastro->__set("DEN_RUA", $_POST["DEN_RUA"]);
+          $cadastro->__set("DEN_NUMERO", $_POST["DEN_NUMERO"]);
+          $cadastro->__set("DEN_BAIRRO", $_POST["DEN_BAIRRO"]);
+          $cadastro->__set("DEN_COMPLEMENTO", $_POST["DEN_COMPLEMENTO"]);
           
           $cadastroDAO->alterar($cadastro);
           

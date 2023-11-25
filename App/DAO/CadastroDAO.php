@@ -82,7 +82,7 @@
                             DEN_BAIRRO=:DEN_BAIRRO,
                             DEN_COMPLEMENTO=:DEN_COMPLEMENTO
                             WHERE
-                            DEN_ID=:DEN_ID";
+                            DEN_ID=:id";
 
                             $stmt = $this->getConn()->prepare($sql);
                             $DEN_ID = $var->__get('DEN_ID');
@@ -95,7 +95,7 @@
                             $DEN_COMPLEMENTO = $var->__get('DEN_COMPLEMENTO');
 
 
-                            $stmt->bindParam(':DEN_ID', $DEN_ID);
+                            $stmt->bindParam(':id', $DEN_ID);
                             $stmt->bindParam(':DEN_TITULO', $DEN_TITULO);
                             $stmt->bindParam(':DEN_DESCRICAO', $DEN_DESCRICAO);
                             $stmt->bindParam(':DEN_FOTO_VIDEO', $DEN_FOTO_VIDEO);
