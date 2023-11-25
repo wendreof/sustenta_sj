@@ -9,24 +9,40 @@
 
             public function inserir($obj){
                 try{
-
                     $sql = "insert into denuncias (
                                 DEN_TITULO,
-                                DEN_DESCRICAO
-
+                                DEN_DESCRICAO,
+                                DEN_FOTO_VIDEO,
+                                DEN_RUA,
+                                DEN_NUMERO,
+                                DEN_BAIRRO,
+                                DEN_COMPLEMENTO
                             ) values(
                                 :DEN_TITULO,
-                                :DEN_DESCRICAO                                
+                                :DEN_DESCRICAO,
+                                :DEN_FOTO_VIDEO,
+                                :DEN_RUA,
+                                :DEN_NUMERO,
+                                :DEN_BAIRRO,
+                                :DEN_COMPLEMENTO
                             )";
                         $stmt = $this->getConn()->prepare($sql);
 
                         $DEN_TITULO = $obj->__get('DEN_TITULO');
                         $DEN_DESCRICAO= $obj->__get('DEN_DESCRICAO');
-
-
+                        $DEN_FOTO_VIDEO= $obj->__get('DEN_FOTO_VIDEO');
+                        $DEN_RUA= $obj->__get('DEN_RUA');
+                        $DEN_NUMERO= $obj->__get('DEN_NUMERO');
+                        $DEN_BAIRRO= $obj->__get('DEN_BAIRRO');
+                        $DEN_COMPLEMENTO= $obj->__get('DEN_COMPLEMENTO');
 
                         $stmt->bindParam(':DEN_TITULO',$DEN_TITULO);
                         $stmt->bindParam(':DEN_DESCRICAO',$DEN_DESCRICAO);
+                        $stmt->bindParam(':DEN_FOTO_VIDEO',$DEN_FOTO_VIDEO);
+                        $stmt->bindParam(':DEN_RUA',$DEN_RUA);
+                        $stmt->bindParam(':DEN_NUMERO',$DEN_NUMERO); 
+                        $stmt->bindParam(':DEN_BAIRRO',$DEN_BAIRRO);
+                        $stmt->bindParam(':DEN_COMPLEMENTO',$DEN_COMPLEMENTO);
                         $stmt->execute();
 
                         header('Location: /listar');          

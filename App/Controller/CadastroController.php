@@ -15,6 +15,11 @@
             
             $cadastro->__set("DEN_TITULO", $_POST["DEN_TITULO"]);
             $cadastro->__set("DEN_DESCRICAO", $_POST["DEN_DESCRICAO"]);
+            $cadastro->__set("DEN_FOTO_VIDEO", $_POST["DEN_FOTO_VIDEO"]);
+            $cadastro->__set("DEN_RUA", $_POST["DEN_RUA"]);
+            $cadastro->__set("DEN_NUMERO", $_POST["DEN_NUMERO"]);
+            $cadastro->__set("DEN_BAIRRO", $_POST["DEN_BAIRRO"]);
+            $cadastro->__set("DEN_COMPLEMENTO", $_POST["DEN_COMPLEMENTO"]);        
         
             $cadastroDAO->inserir($cadastro);
           
