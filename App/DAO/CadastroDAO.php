@@ -137,7 +137,7 @@
             public function listar(){
                 try{
                     $cadastros = array();
-                    $sql = "SELECT * FROM cadastro ORDER BY id ASC";
+                    $sql = "SELECT * FROM denuncias";
 
                     $stmt = $this->getConn()->prepare($sql);
                     $stmt->execute();
@@ -146,12 +146,12 @@
                     foreach($result as $row){
 
                         $cadastro = new CadastroModel();
-                        $cadastro->__set('id',$row['id']);
-                        $cadastro->__set('nome',$row['nome']);
-                        $cadastro->__set('email',$row['email']);
-                        $cadastro->__set('telefone',$row['telefone']);
-                        $cadastro->__set('assunto',$row['assunto']);
-                        $cadastro->__set('mensagem',$row['mensagem']);
+                        $cadastro->__set('DEN_TITULO',$row['DEN_TITULO']);
+                        $cadastro->__set('DEN_DESCRICAO',$row['DEN_DESCRICAO']);
+                        // $cadastro->__set('email',$row['email']);
+                        // $cadastro->__set('telefone',$row['telefone']);
+                        // $cadastro->__set('assunto',$row['assunto']);
+                        // $cadastro->__set('mensagem',$row['mensagem']);
 
                         array_push($cadastros, $cadastro);
                     }
