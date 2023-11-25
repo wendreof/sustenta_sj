@@ -1,16 +1,19 @@
 <section id="conteudo-principal">
 <form action="/cadastroeditar" method="POST">
-    <label>Nome</label>
-    <input type="text" name="nome" id="nome" value="<?php echo $this->getView()->result->__get('nome'); ?>"><br>
-    <label>Email</label>
-    <input type="text" name="email" id="email" value="<?php echo $this->getView()->result->__get('email'); ?>"><br>
-    <label>Telefone</label>
-    <input type="text" name="telefone" id="telefone"value="<?php echo $this->getView()->result->__get('telefone'); ?>"><br>
-    <label>Assunto</label>
-    <input type="text" name="assunto" id="assunto"value="<?php echo $this->getView()->result->__get('assunto'); ?>"><br>
-    <label>Mensagem</label>
-    <textarea name="mensagem" id="mensagem"><?php echo $this->getView()->result->__get('mensagem'); ?></textarea><br>
-    <input type="hidden" name="id" value="<?php echo $this->getView()->result->__get('id'); ?>">
+    <label>Título</label>
+    <input type="text" name="DEN_TITULO" id="DEN_TITULO" value="<?php echo $this->getView()->result->__get('DEN_TITULO'); ?>"><br>
+    <label>Descrição</label>
+    <input type="text" name="DEN_DESCRICAO" id="DEN_DESCRICAO" value="<?php echo $this->getView()->result->__get('DEN_DESCRICAO'); ?>"><br>
+    <label>Selecionar Foto/Vídeo</label>
+    <input type="file" name="DEN_FOTO_VIDEO" id="DEN_FOTO_VIDEO"value="<?php echo $this->getView()->result->__get('DEN_FOTO_VIDEO'); ?>"><br>
+    <label>Localização</label>
+    <input type="text" name="DEN_RUA" id="DEN_RUA"value="<?php echo $this->getView()->result->__get('DEN_RUA'); ?>"><br>
+    <input type="number" name="DEN_NUMERO" id="DEN_NUMERO"value="<?php echo $this->getView()->result->__get('DEN_NUMERO'); ?>"><br>
+    <input type="text" name="DEN_BAIRRO" id="DEN_BAIRRO"value="<?php echo $this->getView()->result->__get('DEN_BAIRRO'); ?>"><br>
+    <input type="text" name="DEN_COMPLEMENTO" id="DEN_COMPLEMENTO"value="<?php echo $this->getView()->result->__get('DEN_COMPLEMENTO'); ?>"><br>
+
+    
+    <input type="hidden" name="id" value="<?php echo $this->getView()->result->__get('DEN_ID'); ?>">
 
     <input type="submit" value="Enviar">
 </form>

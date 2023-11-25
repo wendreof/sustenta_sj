@@ -11,7 +11,7 @@
 
     <label>Localização</label>
     <input type="text" name="DEN_RUA" id="DEN_RUA" placeholder="Rua"><br>
-    <input type="text" name="DEN_NUMERO" id="DEN_NUMERO" placeholder="Número"><br>
+    <input type="number" name="DEN_NUMERO" id="DEN_NUMERO" placeholder="Número"><br>
     <input type="text" name="DEN_BAIRRO" id="DEN_BAIRRO" placeholder="Bairro"><br>
     <input type="text" name="DEN_COMPLEMENTO" id="DEN_COMPLEMENTO" placeholder="Ponto de Referência"><br>
 
