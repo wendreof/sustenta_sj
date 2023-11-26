@@ -1,5 +1,6 @@
 <section id="conteudo-principal">
 <form action="/cadastroenvio" method="POST">
+    <h2>Cadastro de Denúncia</h2>
     <label>Título</label>
     <input type="text" name="DEN_TITULO" id="DEN_TITULO" placeholder="Título da sua denúncia"><br>
 

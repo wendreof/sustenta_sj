@@ -17,6 +17,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
   <script src="<?php echo $this->view->include; ?>resources/js/roteiro.js"></script>
+  <link href="<?php echo $this->view->include; ?>resources/css/estilo.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body class="fundo-dash">
@@ -26,15 +27,15 @@
                 <div class="col-md-2 p-0">
                     <div id="nav-side-menu">
                         <div class="brand p-2 text-center">
-                            <a href="/">
+                            <!-- <a href="/">
                                 <img class="img-fluid" src="<?php echo $this->view->include ?>resources/img/logo.png" alt="logotipo">
-                            </a>
+                            </a> -->
                         </div> 
                                               
                         <nav class="nav flex-column text-secondary dash">
-                            <label class="nav-link text-secondary">Cadastros</label> 
-                            <a class="nav-link text-secondary" href="/listar"><span class="far fa-user sidebar-icon"></span> Listar</a>
+                            <label class="nav-link text-secondary">Dashboard</label> 
                             <a class="nav-link text-secondary" href="/cadastro"><span class="far fa-user sidebar-icon"></span> Cadastro de Denúncia</a>
+                            <a class="nav-link text-secondary" href="/listar"><span class="far fa-user sidebar-icon"></span> Listar</a>
                         </nav>
                     </div>
                 </div>
